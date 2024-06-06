@@ -1,11 +1,10 @@
 ---
 import Header from '../components/Header/Header.astro';
-import Sidebar from '../components/Sidebar.astro';
+import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer/Footer.astro';
 import '../styles/index.css'
 interface Props {
 	title: string;
-	
 }
 
 const { title } = Astro.props;
@@ -20,14 +19,20 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 	</head>
 	<body>
 		<section class="frame-main">
-			<Header />
-			<Sidebar />
-				<slot />
-			<Footer />
+			<section class="fix">
+				<Header />
+				<Sidebar />
+				<Footer />
+			</section>
+		<main>
+			<slot />
+		</main>
 		</section>
 	</body>
 </html>
+
 
