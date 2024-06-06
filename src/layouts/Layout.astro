@@ -1,10 +1,11 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/Header/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
-import Footer from '../components/Footer.astro';
+import Footer from '../components/Footer/Footer.astro';
 import '../styles/index.css'
 interface Props {
 	title: string;
+	
 }
 
 const { title } = Astro.props;
@@ -24,7 +25,7 @@ const { title } = Astro.props;
 		<section class="frame-main">
 			<Header />
 			<Sidebar />
-			<slot />
+				<slot />
 			<Footer />
 		</section>
 	</body>

@@ -1,8 +1,10 @@
 ---
-import '../styles/index.css'
-import Socials from './Footer/Socials.astro'
+import '../../styles/index.css'
+import Socials from './Socials.astro'
 interface Props{
 }
+import { ViewTransitions } from 'astro:transitions';
+
 ---
 
 <footer>
@@ -10,10 +12,13 @@ interface Props{
         <div class="flex-center w-4">
             <span class="w-2 h-2 rounded-full animate-bounce bg-yellow-300"></span>
         </div>
-         <div class="text-white font-PPNeue font-thin tracking-tight text-sm gap-5 hidden md:block abs-center">
+         <div class="gray font-PPNeue font-thin tracking-tight text-sm gap-5 hidden md:flex abs-center">
            <span>Based in Abidjan</span> 
-           <span>Local time 12:48</span>
+           <span>Local time <span class="time"></span>11h20</span>
         </div>
         <Socials />
     </div>
 </footer>
+
+
+<ViewTransitions />

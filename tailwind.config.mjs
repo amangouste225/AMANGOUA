@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         PPNeue: "PPNeue, sans-serif",
+        PPObject: "PPObject, sans-serif",
       },
     },
   },

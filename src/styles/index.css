@@ -1,11 +1,5 @@
 :root {
   --border: rgb(92, 86, 86);
-  --accent-gradient: linear-gradient(
-    45deg,
-    rgb(var(--accent)),
-    rgb(var(--accent-light)) 30%,
-    white 60%
-  );
 }
 
 /* FONTS FACE */
@@ -28,10 +22,28 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "PPNeue";
+  src: local("PPNeue"), url("../fonts/PPNeueMachina.otf") format("otf");
+  src: local("PPNeue"), url("../fonts/PPNeueMachina.woff2") format("woff2");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "PPObject";
+  src: local("PPObject"),
+    url("../fonts/PPObjectSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
 html {
   background: #13151a;
   background-size: 224px;
   position: relative;
+  transition-duration: 0.7s;
+  transition-property: all;
+  -webkit-tap-highlight-color: transparent;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -60,6 +72,26 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+}
+
+/* TYPO */
+
+h1 {
+  font-size: 6rem;
+}
+
+p {
+  font-family: "PPNeue", sans-serif;
+  font-weight: 100;
+}
+/* COLOR */
+
+.yellow {
+  color: #8fff86;
+}
+
+.gray {
+  color: #7d7d7d;
 }
 
 .frame-main {
@@ -99,4 +131,16 @@ footer {
   height: 40px;
   border-top: 1px solid var(--border);
   width: 100%;
+}
+
+/* MAIN */
+main {
+  margin: auto;
+  max-width: calc(100% - 5rem);
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }

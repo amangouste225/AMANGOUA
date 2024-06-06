@@ -1,5 +1,5 @@
 ---
-import '../styles/index.css'
+import '../../styles/index.css'
 interface Props{
 }
 import { HiOutlineHome } from "react-icons/hi2";
@@ -7,6 +7,8 @@ import { GoPeople } from "react-icons/go";
 import { CgLaptop } from "react-icons/cg";
 import { BsLightningCharge } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
+import { Link } from 'react-router-dom';
+import { ViewTransitions } from 'astro:transitions';
 
 ---
 
@@ -21,12 +23,12 @@ import { BsEnvelope } from "react-icons/bs";
             </a>
         </li>
         <li>
-            <a href="/">
+            <a href="/about">
             <GoPeople  color='gray' size={16}/>
             </a>
         </li>
         <li>
-            <a href="/">
+            <a href="/work">
             <CgLaptop  color='gray' size={16}/>
             </a>
         </li>
@@ -43,3 +45,4 @@ import { BsEnvelope } from "react-icons/bs";
     </ul>
  </nav>
 </header>
+<ViewTransitions />
