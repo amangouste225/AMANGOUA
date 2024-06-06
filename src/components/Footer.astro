@@ -1,13 +1,19 @@
 ---
 import '../styles/index.css'
+import Socials from './Footer/Socials.astro'
 interface Props{
 }
 ---
 
-
-
 <footer>
-    <div>
-        
+    <div class="w-full h-full flex justify-between items-center">
+        <div class="flex-center w-4">
+            <span class="w-2 h-2 rounded-full animate-bounce bg-yellow-300"></span>
+        </div>
+         <div class="text-white font-PPNeue font-thin tracking-tight text-sm gap-5 hidden md:block abs-center">
+           <span>Based in Abidjan</span> 
+           <span>Local time 12:48</span>
+        </div>
+        <Socials />
     </div>
 </footer>

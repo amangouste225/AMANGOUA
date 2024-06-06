@@ -2,12 +2,44 @@
 import '../styles/index.css'
 interface Props{
 }
+import { HiOutlineHome } from "react-icons/hi2";
+import { GoPeople } from "react-icons/go";
+import { CgLaptop } from "react-icons/cg";
+import { BsLightningCharge } from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
+
 ---
 
 
 
-<header>
- <nav>
-    <div class="nav_menu"></div>
+<header class="hidden md:block">
+ <nav class="h-full flex justify-center items-center">
+    <ul class="nav_menu flex flex-col gap-5">
+        <li>
+            <a href="/">
+            <HiOutlineHome  color='gray' size={16}/>
+            </a>
+        </li>
+        <li>
+            <a href="/">
+            <GoPeople  color='gray' size={16}/>
+            </a>
+        </li>
+        <li>
+            <a href="/">
+            <CgLaptop  color='gray' size={16}/>
+            </a>
+        </li>
+        <li>
+            <a href="/">
+            <BsLightningCharge  color='gray' size={16}/>
+            </a>
+        </li>
+        <li>
+            <a href="/">
+            <BsEnvelope  color='gray' size={16}/>
+            </a>
+        </li>
+    </ul>
  </nav>
 </header>

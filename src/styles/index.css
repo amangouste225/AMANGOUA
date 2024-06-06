@@ -8,17 +8,58 @@
   );
 }
 
+/* FONTS FACE */
+
+@font-face {
+  font-family: "PPNeue";
+  src: local("PPNeue"), url("../fonts/PPNeueMedium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "PPNeue";
+  src: local("PPNeue"), url("../fonts/PPNeueUltrabold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "PPNeue";
+  src: local("PPNeue"), url("../fonts/PPNeueRegular.woff2") format("woff2");
+  font-weight: 400;
+}
+
 html {
-  font-family: system-ui, sans-serif;
   background: #13151a;
   background-size: 224px;
   position: relative;
 }
+
 body {
   width: 100vw;
   min-height: 100vh;
   position: relative;
   box-sizing: content-box;
+  font-family: inherit;
+}
+
+/* VARIABLES */
+
+.w-4 {
+  width: 40px;
+  height: 40px;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.abs-center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
 .frame-main {
