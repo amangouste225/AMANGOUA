@@ -2,6 +2,27 @@
   --border: rgb(92, 86, 86);
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* FONTS FACE */
 
 @font-face {
@@ -49,18 +70,23 @@ html {
   transition-property: all;
   -webkit-tap-highlight-color: transparent;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 body {
   position: relative;
   font-family: inherit;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  padding: 0;
+  margin: 0;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
+
+
 
 /* VARIABLES */
 
@@ -164,5 +190,18 @@ footer {
   height: 100vh;
   flex-direction: column;
   align-items: center;
+}
 
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+}
+
+h2 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: 2em;
+}
+
+.frame-main {
+  overflow: hidden;
 }
