@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header/Header.astro";
+import Header from "../components/Header/Header";
 import Sidebar from "../components/Header/Sidebar";
 import Footer from "../components/Footer/Footer.astro";
 import "../styles/index.css";
@@ -22,38 +22,74 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
     <script is:inline src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"
     ></script>
-    <script is:inline src="https://unpkg.com/split-type"></script>
   </head>
+  <ViewTransitions />
+
   <body>
-    <section class="frame-main">
+    <div class="frame-main">
       <div class="inner">
-        <Header />
-        <Sidebar client:load />
-        <Footer />
+        <Header client:only />
+        <Sidebar client:only />
+        <Footer client:component-hydration />
         <div class="main">
           <slot />
         </div>
+        <div class="fixed top-0 left-0 bottom-0 right-0 -z-10">
+          <div
+            class="absolute -z-[0] w-[10%] h-[10%] top-0 right-0 pink__gradient"
+          >
+          </div>
+          <div
+            class="absolute -z-[1] w-[70%] h-[70%] right-0 rounded-100 bottom-40 white__gradient"
+          >
+          </div>
+          <div
+            class="absolute -z-[0] w-[25%] h-[25%] right-0 top-0 blue__gradient"
+          >
+          </div>
+          <div
+            class="big font-PPNeue w-[3000px] flex gap-28 lowercase fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold"
+          >
+            <span class="small inline">AMANGOUA</span>
+            <span class="small inline">AMANGOUA</span>
+            <span class="small inline">AMANGOUA</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+    <script>
+      // LENIS JS
+      import Lenis from "lenis";
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {});
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      // create a function to update the date and time
+      function updateDateTime() {
+        // create a new `Date` object
+        const now = new Date();
+
+        // get the current date and time as a string
+        const currentDateTime = now
+          .toLocaleString("fr-FR", {
+            timeZone: "UTC",
+            timeStyle: "long",
+          })
+          .slice(0, 8);
+
+        // update the `textContent` property of the `span` element with the `id` of `datetime`
+        document.querySelector("#datetime").textContent = currentDateTime;
+      }
+
+      // call the `updateDateTime` function every second
+      setInterval(updateDateTime, 1000);
+    </script>
   </body>
 </html>
-
-<script>
-  import Lenis from "lenis";
-  import SplitType from "split-type";
-
-  const lenis = new Lenis();
-  const reveal = new SplitType(".reveal");
-
-  lenis.on("scroll", (e) => {});
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-</script>

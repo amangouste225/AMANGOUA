@@ -7,6 +7,7 @@ const portfolioCollection = defineCollection({
     tags: z.array(z.string()),
     year: z.number(),
     image: z.string(),
+    href: z.string(),
   }),
 });
 

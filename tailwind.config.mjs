@@ -7,6 +7,10 @@ export default {
         PPNeue: "PPNeue, sans-serif",
         PPObject: "PPObject, sans-serif",
       },
+      fontSize: {
+        big: "6.5rem",
+        "big-s": "4rem",
+      },
     },
   },
   plugins: [],

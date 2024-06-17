@@ -1,10 +1,11 @@
 ---
 title: Pavod
 year: 2024
-image: img/third.webp
+image: img/pavod.jpg
+href: portfolio/pavod
+
 tags:
   - wordpress
-  - gsap
-  - bricks builder
-  - lenis
+  - oxygen builder
+  - lenis scroll
 ---

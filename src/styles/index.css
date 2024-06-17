@@ -1,6 +1,11 @@
 :root {
-  --border: #5c5656;
-  --border-gray: #2e2b2b;
+  --border: #ceb7b7;
+  --border-gray: #353131;
+  --background-color: #000000f8;
+  --black-gradient: linear-gradient(144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
 }
 
 *,
@@ -10,7 +15,7 @@
 }
 
 html {
-  background: #13151a;
+  background: var(--background-color);
   position: relative;
   transition-duration: 0.7s;
 }
@@ -86,8 +91,8 @@ body::-webkit-scrollbar {
 /* VARIABLES */
 
 .w-4 {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-right: 1px solid var(--border-gray);
 }
 
@@ -106,18 +111,6 @@ body::-webkit-scrollbar {
 
 /* TYPO */
 
-h1 {
-  font-size: 5.5rem;
-}
-
-h2 {
-  font-size: 4.5rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
 p {
   font-family: "PPNeue", sans-serif;
   font-weight: 100;
@@ -129,13 +122,13 @@ p {
 }
 
 .gray {
-  color: #7d7d7d;
+  color: rgb(128, 104, 104);
 }
 
 /* HEADER */
 header {
   position: fixed;
-  width: 60px;
+  width: 50px;
   border-right: 1px solid var(--border-gray);
   height: 100%;
   background-color: #000000;
@@ -146,7 +139,7 @@ header {
   position: fixed;
   z-index: 99;
   background-color: #000000;
-  height: 60px;
+  height: 50px;
   border-bottom: 1px solid var(--border-gray);
   top: 0;
 }
@@ -157,7 +150,7 @@ footer {
   position: fixed;
   z-index: 99;
   bottom: 0;
-  height: 60px;
+  height: 50px;
   border-top: 1px solid var(--border-gray);
   width: 100%;
   background-color: #000000;
@@ -173,13 +166,9 @@ footer {
 .hero {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 1000px;
   flex-direction: column;
   align-items: center;
-}
-
-h2 {
-  line-height: 2em;
 }
 
 .reveal {
@@ -206,29 +195,126 @@ h2 {
 }
 
 .rot-0:hover .rot-1 {
-  transform: rotate(-3deg);
-  opacity: 0.3;
+  transform: rotate(-2deg);
+  /* opacity: 0.3; */
 }
 
 .rot-0:hover .rot-2 {
-  transform: rotate(-5deg);
-  opacity: 0.4;
+  transform: rotate(-4deg);
+  /* opacity: 0.4; */
 }
 
 .rot-0:hover .rot-3 {
-  transform: rotate(-7deg);
-  opacity: 0.5;
+  transform: rotate(-6deg);
+  /* opacity: 0.5; */
 }
 
 .rot-0:hover .rot-4 {
-  transform: rotate(-9deg);
-  opacity: 0.6;
+  transform: rotate(-8deg);
+  /* opacity: 0.6; */
 }
 
 .rot-0:hover .rot-5 {
-  transform: rotate(-11deg);
+  transform: rotate(-10deg);
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, yellow 100%);
+  filter: blur(225px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #000000 0%, #000000 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(0, 0, 0, 0.6);
+  filter: blur(750px);
+}
+
+.big {
+  font-size: 45rem;
+  letter-spacing: -30px;
+  opacity: 1%;
+  color: white;
+}
+
+.small {
+  animation: loop 60s linear infinite;
+  border: 2px solid red;
+  width: auto;
+  height: 100%;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(50%);
+  }
+
+  to {
+    transform: translateX(-70%);
+  }
+}
+
+.icons {
+  fill: gray;
+  transition: fill 1000ms;
+}
+
+.icons:hover {
+  fill: yellow;
+}
+
+.icon_defaut {
+  position: relative;
+}
+
+.icon_hover svg {
+  font-size: 20px;
+  fill: gray;
+  transition: all 500ms;
+}
+
+.icon_default svg {
+  fill: yellow;
+  font-size: 20px;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.orange {
+  color: orange;
+}
+
+.violet {
+  color: violet;
+}
+
+.borders {
+  border: 1px solid black;
+}
+
+.bordero {
+  border: 1px solid rgb(61, 54, 54);
+}
+
+.border-b {
+  border-bottom: 1px solid rgb(61, 54, 54);
+}
+
+.board-num {
+  font-size: 15px;
+  font-family: 'PPNeue';
+  color: gray;
 }

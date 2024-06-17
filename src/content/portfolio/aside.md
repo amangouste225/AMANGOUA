@@ -1,7 +1,8 @@
 ---
-title: Aside Agency,
-year: 2022
-image: img/first.webp
+title: Aside Agency
+year: 2021
+image: img/first.jpg
+href: portfolio/aside
 tags:
   - wordpress
   - gsap

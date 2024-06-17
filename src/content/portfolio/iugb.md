@@ -1,7 +1,8 @@
 ---
 title: IUGB
 year: 2023
-image: img/second.webp
+image: img/iugb.jpg
+href: portfolio/iugb
 tags:
   - wordpress
   - gsap

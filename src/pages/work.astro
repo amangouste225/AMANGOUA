@@ -1,32 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/index.css'
+import Layout from "../layouts/Layout.astro";
+import "../styles/index.css";
 ---
 
 <Layout title="Amangoua Ange-Thierry | Frontend Dev.">
-	<main class="text-white" id="work">
-		<div class="hero">	
-		 	<span class="gray text-sm">WORK</span>
-			<h1 class="font-PPObject text-center leading-none tracking-tight">
-			<span>Hi, I’m Amangoua</span>, <br> 
-			<span>a <span class="yellow">creative</span> developer</span>
-			</h1>
-			<div> 
-			<p class="font-PPNeue gray font-thin text-base max-w-[700px] mx-auto text-center">I bring value to web development projects by merging technical expertise with creativity and aesthetics.</p>
-			</div>
-		</div>
-	</main>
+  <main class="text-white" id="work">
+    <div class="hero">
+      <span class="gray text-sm">WORK</span>
+      <h1 class="font-PPObject text-center leading-none tracking-tight">
+        <span>Hi, I’m Amangoua</span>, <br />
+        <span>a <span class="yellow">creative</span> developer</span>
+      </h1>
+      <div>
+        <p
+          class="font-PPNeue gray font-thin text-base max-w-[700px] mx-auto text-center"
+        >
+          I bring value to web development projects by merging technical
+          expertise with creativity and aesthetics.
+        </p>
+      </div>
+    </div>
+  </main>
 </Layout>
-
-
-<script is:inline>
-gsap.from('#work', {
-	scale:0,
-	opacity:0,
-	duration:0.5,
-	autoAlpha:0,
-	transformOrigin:'center center',
-	ease:"sine",
-})
-
-</script>
